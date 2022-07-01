@@ -4,15 +4,15 @@ export function useInterval<C extends CallableFunction>(
   callback: C,
   delay: number | null,
 ): void {
-  const savedCallbeck = useRef<C>();
+  const savedCallback = useRef<C>();
 
   useEffect(() => {
-    savedCallbeck.current = callback;
+    savedCallback.current = callback;
   }, [callback]);
 
   useEffect(() => {
     function tick() {
-      if (savedCallbeck.current) savedCallbeck.current();
+      if (savedCallback.current) savedCallback.current();
     }
 
     if (delay !== null) {
