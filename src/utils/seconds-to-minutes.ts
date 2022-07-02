@@ -1,9 +1,8 @@
 import { zeroLeft } from './zero-left';
 
-export function secondsToTime(intervalInSeconds: number): string {
-  const hours = zeroLeft(intervalInSeconds / 3600);
+export function secondsToMinutes(intervalInSeconds: number): string {
   const minutes = zeroLeft((intervalInSeconds / 60) % 60);
   const seconds = zeroLeft((intervalInSeconds % 60) % 60);
 
-  return `${hours}:${minutes}:${seconds}`;
+  return `${minutes}:${seconds}`;
 }
