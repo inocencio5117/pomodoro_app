@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useInterval } from '../hooks/userInterval';
 import { secondsToTime } from '../utils/seconds-to-time';
-import { Button } from './button';
+import { Button } from './Button';
 import { Timer } from './timer';
 const bellStart = require('../sounds/bell-start.mp3');
 const bellFinish = require('../sounds/bell-finish.mp3');
